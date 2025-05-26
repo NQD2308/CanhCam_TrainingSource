@@ -1,0 +1,25 @@
+footer
+	div
+		.container
+			div
+				.section-row-space
+					.input-email
+						button.btn-send
+							@apply  bg-primary-1 rounded-3xl gap-3 px-6 py-1 justify-center items-center hover:bg-primary-2 transition-all duration-300
+							.arrow-icon
+								@apply transform rotate-45 transition-transform duration-300
+								&:hover
+									.arrow-icon
+										@apply rotate-90
+				.section-row-space
+					.certification
+						.logo-certification
+							img
+								@apply w-auto h-15
+	.container-info
+		.section-row-space
+			a
+				@apply p-[10px] rounded-full bg-white 
+		.social-media
+			a
+				@apply px-4 py-3 rounded-md bg-white text-primary-1 hover:bg-primary-1 hover:text-white transition-300

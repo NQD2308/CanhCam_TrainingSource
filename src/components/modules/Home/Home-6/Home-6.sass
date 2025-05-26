@@ -1,0 +1,53 @@
+// Button styles
+a.btn-view-all
+	@apply flex items-center py-3 px-6 w-fit gap-3 border border-white hover:border-primary-2 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 mt-10
+	span
+		@apply text-white
+	.arrow-icon
+		@apply text-white transform rotate-45 transition-transform duration-300
+	&:hover
+		span
+			@apply text-white
+		i
+			@apply text-white 
+		.arrow-icon
+			@apply rotate-90 
+	
+.section-6
+	.container
+		.title-content
+			h2
+				@apply text-6xl font-medium space-x-14 text-center text-white
+		.product-carousel
+			a.cart
+				@apply flex flex-col gap-3
+				.cart-image
+					@apply flex flex-col gap-3
+					.product-item-img
+						@apply w-full h-full relative overflow-hidden rounded-md
+						.product-item-img-overlay
+							@apply absolute left-1/2 bottom-0 translate-x-[-50%] bg-white translate-y-full p-[10px] rounded-md transition-all duration-500 ease-in-out flex items-center justify-center
+						.img-wrapper
+							@apply  relative rounded-md overflow-hidden transition-all duration-500 ease-in-out
+				.cart-content
+					@apply flex flex-col gap-3
+					.product-item-name
+						@apply flex flex-col items-center gap-2
+						span
+							@apply w-full text-center
+						.product-name
+							@apply text-lg text-white font-bold transition-all duration-300
+							.product-item:hover &
+								@apply text-primary-1
+
+				&:hover
+					.product-item-img 
+						.img-wrapper
+							transform: scale(1.1)
+						.product-item-img-overlay
+							transform: translateX(-50%) translateY(-20px)
+							@apply opacity-100
+					.cart-content
+						.product-item-name
+							.product-name
+								@apply text-primary-2
