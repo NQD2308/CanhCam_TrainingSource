@@ -1,0 +1,139 @@
+.section
+	@apply pt-20 pb-0
+
+	.flex-card-section
+		@apply w-full
+	.img-wrap
+		
+		a
+			@screen xl
+				@apply  flex
+				width: auto
+				img
+					@apply object-cover
+					width: 100%
+					height: 100%
+					object-fit: cover
+					object-position: center
+	.item
+		@apply relative bg-neutral-50 rounded-xl
+		display: flex
+		flex-direction: column
+		height: 100%
+		max-height: 620px // giới hạn tối đa chiều cao toàn bộ card
+		overflow: hidden // không cho nội dung tràn ra
+	
+	
+	.number-label 
+		@apply absolute top-15 left-0 w-full text-center pointer-events-none z-50 text-3xl font-bold text-neutral-White
+		user-select: none
+		>.headline 
+			display: inline-block  // Để nội dung vừa đủ
+			// transform: rotate(-90deg) // Nếu vẫn muốn xoay chữ như hiện tại
+			white-space: nowrap
+
+	.txt
+		@apply w-full h-full rounded-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-30
+		transition: .4s all  ease-in-out
+		justify-content: center
+		background: var(--color-code)
+		>.headline
+			@apply whitespace-nowrap 
+			transition: .5s all  ease-in-out
+			position: absolute
+			top: 60%
+			left: 50%
+			transform:  translateX(-50%) translateY(-50%) rotate(-90deg)
+
+		h3
+			@apply text-neutral-White font-bold text-3xl
+	.text
+		@apply p-8 w-full transition rounded-xl pt-15
+		justify-content: flex-end
+		background: #F6F6F6
+		@media screen and ( max-width: 1024px)
+			@apply opacity-100 pt-6
+		.headline
+			transition: .5s all  ease-in-out
+		h3.title
+			@apply text-neutral-900 font-bold text-3xl
+	
+	.flex-options
+		display: flex
+		flex-direction: row
+		align-items: stretch
+		overflow: hidden
+		@apply w-full h-full
+		@media screen and ( max-width: 1024px)
+			@apply hidden
+	.card-option
+		transform: scale(1)
+		background-size: cover
+		position: relative
+		width: 8%
+		overflow: hidden
+		cursor: pointer
+		transition: .6s all ease-in-out
+		border: 2px solid white
+		&::after
+			content: ''
+			@apply block absolute pointer-events-none left-0 bottom-0 z-10  transition w-full h-full opacity-0
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 33.18%, rgba(#000, .5) 100%)
+		
+		p 
+			white-space: normal
+			overflow: visible
+			text-overflow: unset
+		
+
+		&:not(.active)
+			flex-grow: 1
+
+			.text
+				@apply opacity-100
+
+				.headline
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					max-width: 100%
+
+				p 
+					white-space: nowrap
+					overflow: hidden
+					text-overflow: ellipsis
+					max-width: 100%
+					white-space: nowrap
+					max-height: 1.5em // chỉ hiển thị 1 dòng
+					opacity: 0.8
+					transition: max-height 0.3s ease, opacity 0.3s ease
+		
+
+		&.active
+			flex-grow: 10000
+			transform: scale(1)
+			width: 50%
+			.txt
+				@apply opacity-0
+			.txt-wrap
+				height: 140px
+				@apply w-full
+
+			.text
+				@apply opacity-100
+				.headline,
+				p 
+					white-space: normal
+					overflow: visible
+					text-overflow: unset
+					max-height: 500px // hoặc auto
+					transition: max-height 0.5s ease, opacity 0.5s ease
+					opacity: 1
+			
+			.number-label 
+				@apply opacity-0 pointer-events-none
+			
+				
+		.card-label
+			@apply w-full h-full
+			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95)

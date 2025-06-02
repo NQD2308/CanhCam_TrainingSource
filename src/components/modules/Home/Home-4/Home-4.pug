@@ -1,7 +1,100 @@
-.section-4(class="w-full")
-	.container(class="w-full flex items-center justify-center")
-		.title-box(class="w-full flex flex-col items-center justify-center")
-			h2(class="text-4xl font-bold text-center mb-4") Tại sao chọn ACR?
-			h5(class="text-center text[roboto] text-lg font-bold lg:w-[640px] md:w-[480px] w-[320px] mx-auto ") ACR tự hào mang đến các sản phẩm thực phẩm sấy thăng hoa chất lượng cao, đáp ứng nhu cầu đa dạng từ thị trường trong nước đến quốc tế
-	.swiper-box
-		.swiper-wrapper
+.section.flex-card-section
+	.container-cart(class='')
+		.wrap-title(class='flex flex-col justify-between items-center mb-10')
+			h2.block-title.mb-6(class='font-medium text-6xl text-neutral-900') Why choose AFI?
+			p(class='md:w-[640px] max-w-auto neutral-800 text-lg text-center px-3	') ACR tự hào mang đến các sản phẩm thực phẩm sấy thăng hoa chất lượng cao, đáp ứng nhu cầu đa dạng từ thị trường trong nước đến quốc tế
+		.flex-options
+			.card-option(style='--color-code:#A0CF64')
+				.card-label
+					.item 
+						.text 
+							h3.title.headline.text-clamp-24 .01 Công nghệ tiên tiến 
+							p(class='neutral-950 text-lg pt-8') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+						.img-wrap
+							a
+								img(src="img/news_1.png", alt="alt")
+						.number-label 
+							p.headline.text-clamp-24 .01
+						.txt 
+							h3.headline.text-white.text-clamp-24 Công nghệ tiên tiến
+			.card-option(style='--color-code:#78AD34')
+				.card-label
+					.item 
+						.text 
+							h3.title.headline.text-clamp-24 .02 An toàn thực phẩm
+							p(class='neutral-950 text-lg') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+						.img-wrap
+							a
+								img(src="img/news_2.png", alt="alt")
+						
+						.number-label 
+							p.headline.text-clamp-24 .02
+						.txt 
+							h3.headline.text-white.text-clamp-24 An toàn thực phẩm
+			.card-option(style='--color-code:#699D25')
+				.card-label
+					.item 
+						.text 
+							h3.title.headline.text-clamp-24 .03 Đa dạng sản phẩm
+							p(class='neutral-950 text-lg') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+						.img-wrap
+							a
+								img(src="img/news_3.png", alt="alt")
+						
+						.number-label 
+							p.headline.text-clamp-24 .03
+						.txt 
+							h3.headline.text-white.text-clamp-24 Đa dạng sản phẩm
+			.card-option(style='--color-code:#5F8E22').active
+				.card-label
+					.item 
+						.text 
+							h3.title.headline.text-clamp-24 .04 Bền vững và tự nhiên
+							p(class='neutral-950 text-lg') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+						.img-wrap
+							a
+								img(src="img/img3.png", alt="alt")
+						
+						.number-label 
+							p.headline.text-clamp-24 .04
+						.txt 
+							h3.headline.text-white.text-clamp-24 Bền vững và tự nhiêniến
+			
+		.single-swiper.init-swiper(class='lg:hidden px-3')
+			.swiper.mySwiperFlexCard
+				.swiper-wrapper
+					.swiper-slide
+						.item(style='--color-code:#A0CF64')
+							.img-wrap(class="h-[250px] w-full overflow-hidden")
+								a
+									img(src="img/news_1.png", alt="alt" class="w-full h-full object-cover")
+							.text(class="text-neutral-White !bg-[#A0CF64] !rounded-tl-none !rounded-tr-none")
+								h3.headline.text-white.text-clamp-24 .01 Công nghệ tiên tiến
+								p(class='neutral-950 text-lg') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+					.swiper-slide
+							.item(style='--color-code:#78AD34')
+								.img-wrap(class="h-[250px] w-full overflow-hidden")
+									a
+										img(src="img/news_2.png", alt="alt" class="w-full h-full object-cover")
+								.text(class="text-neutral-White !bg-[#78AD34] !rounded-tl-none !rounded-tr-none")
+									h3.headline.text-white.text-clamp-24 .02 An toàn thực phẩm
+									p(class='neutral-950 text-lg') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+					.swiper-slide
+							.item(style='--color-code:#699D25')
+								.img-wrap(class="h-[250px] w-full overflow-hidden")
+									a
+										img(src="img/news_3.png", alt="alt" class="w-full h-full object-cover")
+								.text(class="text-neutral-White !bg-[#699D25] !rounded-tl-none !rounded-tr-none")
+									h3.headline.text-white.text-clamp-24 .03 Đa dạng sản phẩm
+									p(class='neutral-950 text-lg') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+					.swiper-slide
+							.item(style='--color-code:#5F8E22')
+								.img-wrap(class="h-[250px] w-full overflow-hidden")
+									a
+										img(src="img/img3.png", alt="alt" class="w-full h-full object-cover")
+								.text(class="text-neutral-White !bg-[#5F8E22] !rounded-tl-none !rounded-tr-none !pt-6")
+									h3 .04 Bền vững và tự nhiên
+									p(class='neutral-950 text-lg') Sử dụng nguyên liệu tươi sạch, không chất bảo quản, thân thiện với môi trường và sức khỏe người tiêu dùng
+
+
+//- script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")

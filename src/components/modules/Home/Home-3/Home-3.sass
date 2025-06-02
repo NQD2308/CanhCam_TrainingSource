@@ -1,6 +1,6 @@
 // Section styles
 .section-3
-	@apply w-full py-10 md:py-20 bg-[url('/img/banner2.png')] bg-cover bg-center bg-no-repeat min-h-screen
+	@apply w-full py-10 md:py-20 bg-[url('/img/banner2.png')] bg-cover bg-center bg-no-repeat
 	background-size: 100% 100%
 	@media (max-width: 768px)
 		background-size: cover
@@ -13,7 +13,7 @@
 			@apply w-full md:col-span-5
 
 			.quote-content
-				@apply w-full relative
+				@apply w-full relative md:mt-[230px]
 
 				.quote-icon
 					@apply w-full absolute top-0 left-0 z-0
@@ -31,8 +31,9 @@
 					@apply w-full flex items-center justify-center
 
 					.box
-						@apply flex flex-col items-center p-6 md:p-8 lg:p-10 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl
+						@apply flex flex-col items-start p-6 md:p-8 lg:p-10 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
 						
+
 						i
 							@apply text-3xl md:text-4xl lg:text-5xl text-white mb-4
 						
@@ -46,7 +47,7 @@
 					@apply w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4
 
 					.box
-						@apply flex flex-col items-center p-6 md:p-8 lg:p-10 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl
+						@apply flex flex-col items-start p-6 md:p-8 lg:p-10 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
 						
 						i
 							@apply text-3xl md:text-4xl lg:text-5xl text-white mb-4

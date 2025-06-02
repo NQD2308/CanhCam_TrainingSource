@@ -21,6 +21,7 @@
 	"dependencies": {
 		"@babel/register": "7.21.0",
 		"@fancyapps/ui": "^4.0.31",
+		"animate.css": "^4.1.1",
 		"aos": "^2.3.4",
 		"cheerio": "^1.0.0-rc.12",
 		"cli-color": "^2.0.4",

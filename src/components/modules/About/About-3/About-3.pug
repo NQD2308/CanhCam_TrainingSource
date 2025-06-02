@@ -1,0 +1,91 @@
+.about-section-3(class="w-full p-20 bg-[#FEFBF4]")
+	.container(class="w-full grid grid-cols-12")
+		.title-content(class="col-span-12 md:col-span-12")
+			h2(class="text-4xl md:text-5xl lg:text-6xl font-medium text-center text-neutral-900 text-[roboto] capitalize") Chứng nhận
+	.product-carousel(class="w-full h-full relative rounded-xl overflow-hidden gap-3 mt-6")
+			.swiper(class="grid grid-cols-1")
+				.certificacteSwiper(class="mw-[1100px] px-[10px] mx-20 overflow-hidden")
+					.swiper-wrapper
+						//- Thẻ sản phẩm						
+						.swiper-slide.cart
+							.cart-image(class="flex justify-center items-center")
+								img(src="/img/certification_1_without_background.png", alt="", class="w-auto h-[160px] product-img object-cover aspect-[16/9] ")
+							.cart-content(class="mt-7 flex justify-between items-center bg-transparent")
+								.product-item-name
+									h3(class="text-neutral-900 text-xl uppercase text-center") BRC Version 9	
+									p(class="product-name mt-4 text-center") Chứng nhận BRC Version 9 là tiêu chuẩn quốc tế về an toàn thực phẩm do Hiệp hội Bán lẻ Anh Quốc (British Retail Consortium) ban hành
+						.swiper-slide.cart
+							.cart-image(class="flex justify-center items-center")
+								img(src="/img/certification_2_without_background.png", alt="", class="w-auto h-[160px] product-img object-cover aspect-[16/9] ")
+							.cart-content(class="mt-7 flex justify-between items-center bg-transparent")
+								.product-item-name
+									h3(class="text-neutral-900 text-xl uppercase text-center") BRC Version 9	
+									p(class="product-name mt-4 text-center") Chứng nhận BRC Version 9 là tiêu chuẩn quốc tế về an toàn thực phẩm do Hiệp hội Bán lẻ Anh Quốc (British Retail Consortium) ban hành
+						.swiper-slide.cart
+							.cart-image(class="flex justify-center items-center")
+								img(src="/img/certification_3_without_background.png", alt="", class="w-auto h-[160px] product-img object-cover aspect-[16/9] ")
+							.cart-content(class="mt-7 flex justify-between items-center bg-transparent")
+								.product-item-name
+									h3(class="text-neutral-900 text-xl uppercase text-center") BRC Version 9	
+									p(class="product-name mt-4 text-center") Chứng nhận BRC Version 9 là tiêu chuẩn quốc tế về an toàn thực phẩm do Hiệp hội Bán lẻ Anh Quốc (British Retail Consortium) ban hành
+						.swiper-slide.cart
+							.cart-image(class="flex justify-center items-center")
+								img(src="/img/certification_1_without_background.png", alt="", class="w-auto h-[160px] product-img object-cover aspect-[16/9] ")
+							.cart-content(class="mt-7 flex justify-between items-center bg-transparent")
+								.product-item-name
+									h3(class="text-neutral-900 text-xl uppercase text-center") BRC Version 9	
+									p(class="product-name mt-4 text-center") Chứng nhận BRC Version 9 là tiêu chuẩn quốc tế về an toàn thực phẩm do Hiệp hội Bán lẻ Anh Quốc (British Retail Consortium) ban hành
+						.swiper-slide.cart
+							.cart-image(class="flex justify-center items-center")
+								img(src="/img/certification_2_without_background.png", alt="", class="w-auto h-[160px] product-img object-cover aspect-[16/9] ")
+							.cart-content(class="mt-7 flex justify-between items-center bg-transparent")
+								.product-item-name
+									h3(class="text-neutral-900 text-xl uppercase text-center") BRC Version 9	
+									p(class="product-name mt-4 text-center") Chứng nhận BRC Version 9 là tiêu chuẩn quốc tế về an toàn thực phẩm do Hiệp hội Bán lẻ Anh Quốc (British Retail Consortium) ban hành
+						.swiper-slide.cart
+							.cart-image(class="flex justify-center items-center")
+								img(src="/img/certification_3_without_background.png", alt="", class="w-auto h-[160px] product-img object-cover aspect-[16/9] ")
+							.cart-content(class="mt-7 flex justify-between items-center bg-transparent")
+								.product-item-name
+									h3(class="text-neutral-900 text-xl uppercase text-center") BRC Version 9	
+									p(class="product-name mt-4 text-center") Chứng nhận BRC Version 9 là tiêu chuẩn quốc tế về an toàn thực phẩm do Hiệp hội Bán lẻ Anh Quốc (British Retail Consortium) ban hành
+						
+					.swiper-button-next(class="custom-swiper-button before:hidden after:hidden bg-black/30 rounded-full py-3 px-7 flex items-center justify-center")
+						i(class="fa-light fa-chevron-right text-primary-1 text-lg")
+					.swiper-button-prev(class="custom-swiper-button before:hidden after:hidden bg-black/30 rounded-full py-3 px-7 flex items-center justify-center")
+						i(class="fa-light fa-chevron-left text-primary-1 text-lg")
+
+script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+script.
+	var swiper = new Swiper(".certificacteSwiper", {
+		loop: true,
+		spaceBetween: 40,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			dynamicBullets: true,
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			480: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1200: {
+				slidesPerView: 3,
+			},
+		}
+	});
