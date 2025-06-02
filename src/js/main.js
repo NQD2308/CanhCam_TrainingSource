@@ -20,18 +20,6 @@ $(document).ready(function () {
       $(this).toggleClass("active");
     });
 
-    // Home/Home-1
-    var swiper = new Swiper(".mySwiperBanner", {
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-
     // Home/Home-4
     var swiper = new Swiper(".mySwiperFlexCard", {
       spaceBetween: 10,
@@ -46,37 +34,37 @@ $(document).ready(function () {
     });
 
     // Home/Home-6
-    var swiper = new Swiper(".wrapper", {
-      loop: true,
-      spaceBetween: 40,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        480: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        },
-      },
-    });
+    // var swiper = new Swiper(".wrapper", {
+    //   loop: true,
+    //   spaceBetween: 40,
+    //   autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    //     pauseOnMouseEnter: true,
+    //   },
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //   },
+    //   breakpoints: {
+    //     320: {
+    //       slidesPerView: 1,
+    //     },
+    //     480: {
+    //       slidesPerView: 2,
+    //     },
+    //     768: {
+    //       slidesPerView: 3,
+    //     },
+    //     1200: {
+    //       slidesPerView: 4,
+    //     },
+    //   },
+    // });
 
     // Modal search
     const openModalBtn = document.getElementById("openModalBtn");
