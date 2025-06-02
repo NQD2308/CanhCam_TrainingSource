@@ -5,12 +5,18 @@ footer
 				.section-row-space
 					.input-email
 						button.btn-send
-							@apply  bg-primary-1 rounded-3xl gap-3 px-6 py-1 justify-center items-center hover:bg-primary-2 transition-all duration-300
+							@apply flex items-center py-1 px-6 w-fit gap-3 bg-primary-1 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 
+							span
+								@apply text-white
 							.arrow-icon
-								@apply transform rotate-45 transition-transform duration-300
-								&:hover
-									.arrow-icon
-										@apply rotate-90
+								@apply text-white transform rotate-45 transition-transform duration-300
+							&:hover
+								span
+									@apply text-white
+								i
+									@apply text-white 
+								.arrow-icon
+									@apply rotate-90 
 				.section-row-space
 					.certification
 						.logo-certification
