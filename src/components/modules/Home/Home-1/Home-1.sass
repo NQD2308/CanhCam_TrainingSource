@@ -6,7 +6,7 @@
 
 // ===========setup button===========	
 .btn_view-more
-	@apply bg-white rounded-5 py-3 px-8 gap-2 text-[#034AA0] mt-3 justify-start border border-[#034AA0]
+	@apply bg-white rounded-5 py-3 px-8 gap-2 text-[#034AA0]  justify-start border border-[#034AA0]
 	i
 		@apply text-[#034AA0] ml-3
 
@@ -19,16 +19,22 @@
 		.swiper-slide
 			@apply flex items-center justify-center relative
 			.wrapper-content
-				@apply w-full h-full 
+				img
+					height: rr(780px)
+					
 				.content
 					.title
-						@apply text-4xl lg:text-6xl font-medium
+						width: rr(526px)
+						@apply text-4xl lg:text-6xl font-medium leading-[50px]
 					.text
-						@apply text-2xl lg:text-3xl
+						@apply text-2xl lg:text-3xl leading-[40px] tracking-[0.9px]
 					a.btn-view-all-in-carousel
-						@apply flex items-center py-3 px-6 w-fit gap-3 bg-primary-1 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 mt-10
+						@apply flex items-center py-2 px-6 w-fit gap-3 bg-primary-1 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 mt-8
 						span
-							@apply text-white
+							@apply text-white font-medium text-lg
+						i
+							@apply text-white text-[24px]
+
 						.arrow-icon
 							@apply text-white transform rotate-45 transition-transform duration-300
 						&:hover

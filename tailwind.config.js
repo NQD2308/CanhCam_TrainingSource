@@ -67,7 +67,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      primary: ["Gilroy", "sans-serif"],
+      primary: ["Roboto", "sans-serif"],
       awesome: ['"Font Awesome 6 Pro"'],
     },
     fontSize: {
