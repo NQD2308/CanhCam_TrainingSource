@@ -1,19 +1,33 @@
 // Button styles
-a.btn-view-more
-	@apply flex items-center w-fit gap-3 border border-primary-1 hover:border-primary-2 rounded-3xl px-6 py-3 justify-center hover:bg-primary-2 transition-all duration-300 mt-11
-	.arrow-icon
-		@apply transform rotate-45 transition-transform duration-300
-	&:hover
+.home-2-container
+	a.btn-view-more
+		margin-top: rr(-26px) !important
+		@apply flex items-center w-fit gap-3 border border-primary-1 hover:border-primary-2 rounded-3xl px-6 py-3 justify-center hover:bg-primary-2 transition-all duration-300
 		span
-			@apply text-white
-		i
-			@apply text-white 
+			@apply text-lg font-medium
 		.arrow-icon
-			@apply rotate-90 
+			@apply transform rotate-45 transition-transform duration-300
+		&:hover
+			span
+				@apply text-white
+			i
+				@apply text-white 
+			.arrow-icon
+				@apply rotate-90 
 
-.img-item
-	@apply w-[170px] md:w-[200px] lg:w-[242px] h-[170px] md:h-[200px] lg:h-[226px] object-cover
-	&:nth-child(1)
+	.content p
+			width: rr(640px)
+			@apply text-justify
+
+	.img-item
+		width: rr(332px)
+		height: rr(316px)
+		@apply object-cover
+	.img-item-1
 		@apply rounded-tr-12.5 rounded-bl-12.5 md:rounded-tr-25 md:rounded-bl-25
-	&:nth-child(2)
+	.img-item-2
 		@apply rounded-br-12.5 rounded-tl-12.5 md:rounded-br-25 md:rounded-tl-25 
+	.img-item-3
+		@apply rounded-br-12.5 rounded-tl-12.5 md:rounded-br-25 md:rounded-tl-25 
+	.img-item-4
+		@apply rounded-tr-12.5 rounded-bl-12.5 md:rounded-tr-25 md:rounded-bl-25

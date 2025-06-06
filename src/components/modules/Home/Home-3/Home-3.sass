@@ -13,7 +13,9 @@
 			@apply w-full md:col-span-5
 
 			.quote-content
-				@apply w-full relative md:mt-[230px]
+				margin-top: rr(265px)
+				margin-left: rr(-20px)
+				@apply w-full relative
 
 				.quote-icon
 					@apply w-full absolute top-0 left-0 z-0
@@ -31,29 +33,43 @@
 					@apply w-full flex items-center justify-center
 
 					.box
-						@apply flex flex-col items-start p-6 md:p-8 lg:p-10 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
+						width: rr(259px)
+						height: rr(259px)
+						@apply flex flex-col items-start p-6 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
 						
-
 						i
-							@apply text-3xl md:text-4xl lg:text-5xl text-white mb-4
-						
-						h4
-							@apply text-4xl md:text-5xl lg:text-[64px] font-bold text-white text-[roboto]
+							@apply my-auto text-3xl md:text-4xl lg:text-5xl text-white
 						
 						p
-							@apply text-base md:text-lg lg:text-xl font-bold text-white text-[roboto]
+							@apply text-base md:text-lg lg:text-xl my-auto font-bold text-white
+
+						.count
+							@apply my-auto
+							h4
+								@apply text-4xl md:text-5xl lg:text-[52px] font-bold text-white 
+
+							span 
+								@apply text-neutral-White text-6xl mt-2
 
 				.bottom-content
 					@apply w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4
 
 					.box
-						@apply flex flex-col items-start p-6 md:p-8 lg:p-10 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
+						width: rr(259px)
+						height: rr(259px)
+						@apply flex flex-col items-start px-6 md:p-8 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
 						
 						i
-							@apply text-3xl md:text-4xl lg:text-5xl text-white mb-4
-						
-						h4
-							@apply text-4xl md:text-5xl lg:text-[64px] font-bold text-white text-[roboto]
+							@apply text-3xl md:text-4xl lg:text-5xl text-white 
 						
 						p
-							@apply text-base md:text-lg lg:text-xl font-bold text-white text-[roboto]
+							
+							@apply text-base md:text-lg inline-block font-bold text-white
+
+						.count
+							@apply my-auto
+							h4
+								@apply text-4xl md:text-5xl lg:text-[52px] font-bold text-white 
+
+							span 
+								@apply text-neutral-White text-6xl mt-2

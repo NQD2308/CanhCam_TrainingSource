@@ -15,12 +15,12 @@
 
 .banner-swiper
 	.swiper
-		@apply w-full h-full
 		.swiper-slide
 			@apply flex items-center justify-center relative
 			.wrapper-content
 				img
 					height: rr(780px)
+					@apply object-cover 
 					
 				.content
 					.title
@@ -46,7 +46,28 @@
 								@apply rotate-90 
 
 	.swiper-pagination-bullet
-		@apply w-2 h-2 md:w-5 md:h-5 lg:w-6 lg:h-6 md:mb-20 bg-neutral-White rounded-full opacity-100 border border-primary-2
+		width: rr(16px)
+		height: rr(16px)
+		@apply bg-neutral-White rounded-full opacity-100 border border-primary-2
 
 		&-active
 			@apply bg-primary-2
+	
+
+	.btn-next-banner-home
+		margin: rr(-24px) rr(112px) 0 0
+		@apply hover:bg-neutral-White transition-all duration-300 ease-out
+		&:hover
+			i
+				@apply text-primary-1
+	.btn-prev-banner-home
+		margin: rr(-24px) 0 0 rr(132px) 
+		@apply hover:bg-neutral-White transition-all duration-300 ease-out
+		&:hover
+			i
+				@apply text-primary-1
+
+	.bullet-home
+		margin: 0 0 rr(40px) rr(10px)
+		@apply mb-[rr(58px)]
+		

@@ -1,10 +1,12 @@
-.section
-	@apply pt-20 pb-0
+.section-home-4
+	.wrap-title
+		@apply mb-4 md:mb-6 lg:mb-8
+		h2
+			@apply -mt-3
+		p
+			width: rr(660px)
 
-	.flex-card-section
-		@apply w-full
 	.img-wrap
-		
 		a
 			@screen xl
 				@apply  flex
@@ -48,29 +50,37 @@
 		h3
 			@apply text-neutral-White font-bold text-3xl
 	.text
-		@apply p-8 w-full transition rounded-xl pt-15
+		@apply w-full transition rounded-xl
 		justify-content: flex-end
 		background: #F6F6F6
 		@media screen and ( max-width: 1024px)
 			@apply opacity-100 pt-6
 		.headline
 			transition: .5s all  ease-in-out
-		h3.title
-			@apply text-neutral-900 font-bold text-3xl
+		.block-title
+			@apply pt-15 pl-20 flex gap-[34px] tracking-wider
+			h3.title
+				@apply text-neutral-900 font-bold text-3xl
+		.block-content
+			padding: rr(10px) 0
+			p
+				margin-left: rr(166px) 
+				@apply mt-3
 	
 	.flex-options
 		display: flex
 		flex-direction: row
 		align-items: stretch
 		overflow: hidden
-		@apply w-full h-full
+		height: rr(680px)
+		@apply w-full
 		@media screen and ( max-width: 1024px)
 			@apply hidden
 	.card-option
 		transform: scale(1)
 		background-size: cover
 		position: relative
-		width: 8%
+		width: rr(119px)
 		overflow: hidden
 		cursor: pointer
 		transition: .6s all ease-in-out

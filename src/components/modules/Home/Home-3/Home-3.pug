@@ -1,25 +1,31 @@
-.section-3(class="w-full pt-10 md:pt-20 bg-[url('/img/field.png')] bg-cover bg-center bg-no-repeat")
-	.container(class="w-full h-fit grid md:grid-cols-12 grid-cols-1 gap-8")
-		.col-left(class="w-full md:col-span-5")
+.section-3.section-py
+	.container(class="w-full h-fit grid md:grid-cols-12 grid-cols-1 ")
+		.col-left(class="w-full md:col-span-6")
 			.quote-content(class="w-full relative")
 				.quote-icon(class="w-full absolute top-0 left-0 z-0")
 					img(src="/img/quote_icon.png", alt="", class="w-25 h-auto object-cover")
-				.quote-title(class="w-full text-3xl md:text-4xl lg:text-6xl font-medium text-white text-[roboto] relative z-10 pt-9 pl-6") Nâng Tầm Giá Trị Nông Sản Với Công Nghệ Sấy Thăng Hoa Đỉnh Cao
+				.quote-title(class="w-full text-3xl md:text-4xl lg:text-6xl font-medium text-white leading-[50px] relative z-10 pt-9 pl-6") Nâng Tầm Giá Trị Nông Sản Với Công Nghệ Sấy Thăng Hoa Đỉnh Cao
 
 		.col-right-home-3(class="w-full md:col-span-7")
 			.content-box(class="flex flex-col items-center justify-center gap-2 mx-auto")
 				.top-content(class="w-full flex items-center justify-center mb-8 md:mb-0")
 					.box
 						<i class="fa-light fa-globe"></i>
-						h4(class="text-4xl md:text-5xl lg:text-[64px] font-bold text-white text-[roboto]") 100+
-						p(class="text-base md:text-lg lg:text-xl font-bold text-white text-[roboto]") Đối Tác Toàn Cầu
+						.count(class="flex justify-center")
+							h4(class="text-4xl md:text-5xl text-white") 100 
+							span +
+						p(class="text-base md:text-lg lg:text-xl font-bold text-white") Đối Tác Toàn Cầu
 				.bottom-content(class="w-full flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4") 
 					.box
 						<i class="fa-light fa-business-time"></i>
-						h4(class="text-4xl md:text-5xl lg:text-[64px] font-bold text-white text-[roboto]") 10+
-						p(class="text-base md:text-lg lg:text-xl font-bold text-white text-[roboto]") Năm Kinh Nghiệm
+						.count(class="flex justify-center")
+							h4(class="text-4xl md:text-5xl text-white") 10
+							span +
+						p(class="text-base md:text-lg lg:text-xl font-bold text-white") Năm Kinh Nghiệm
 					.box
 						<i class="fa-light fa-users"></i>
-						h4(class="text-4xl md:text-5xl lg:text-[64px] font-bold text-white text-[roboto]") 99%
-						p(class="text-base md:text-lg lg:text-xl font-bold text-white text-[roboto]") Khách Hàng Hài Lòng
+						.count(class="flex justify-center")
+							h4(class="text-4xl md:text-5xl text-white") 99
+							span %
+						p(class="text-base md:text-lg lg:text-xl font-bold text-white") Khách Hàng Hài Lòng
 		

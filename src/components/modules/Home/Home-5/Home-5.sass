@@ -1,20 +1,18 @@
-// Button styles
-a.btn-view-more
-	@apply flex items-center w-fit gap-3 border border-primary-1 hover:border-primary-2 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 mt-11
-	span
-		@apply text-primary-1
-	.arrow-icon
-		@apply text-primary-1 transform rotate-45 transition-transform duration-300
-	&:hover
-		span
-			@apply text-white
-		i
-			@apply text-white 
-		.arrow-icon
-			@apply rotate-90 
-
-
 .section-5
+	a.btn-view-more
+		@apply flex items-center px-6 py-3 gap-3 border border-primary-1 hover:border-primary-2 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 mt-11
+		span
+			@apply text-primary-1
+		.arrow-icon
+			@apply text-primary-1 transform rotate-45 transition-transform duration-300
+		&:hover
+			span
+				@apply text-white
+			i
+				@apply text-white 
+			.arrow-icon
+				@apply rotate-90 
+
 	.container
 		.title-content
 			h2
@@ -22,15 +20,22 @@ a.btn-view-more
 			.categol-list
 				@apply w-full
 				.categol-item
-					@apply flex items-center gap-3 flex-nowrap overflow-x-auto w-full min-w-0 scrollbar-hide
-					a
-						@apply text-lg px-4 py-3 rounded-full hover:bg-primary-2 hover:text-white hover:border-primary-2 transition-all duration-300 shrink-0
+					ul
+						@apply flex items-center justify-center gap-3 
+						//flex-nowrap overflow-x-auto w-full min-w-0 scrollbar-hide
+						li
+							height: rr(25px)
+							a
+								@apply text-lg px-4 py-3 rounded-full hover:bg-primary-2 hover:text-white hover:border-primary-2 transition-all duration-300 shrink-0
 				// Responsive: mobile chuyển sang ngang, scroll được
 				@media (max-width: 768px)
 					.categol-item
 						@apply flex-nowrap overflow-x-auto w-full		
 
 		.product-list
+			@apply mt-7
+			.banner img
+				height: rr(400px)
 			a.product
 				@apply flex flex-col gap-3
 				.product-item
@@ -41,13 +46,17 @@ a.btn-view-more
 							@apply absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-full bg-white p-[10px] rounded-md transition-all duration-500 ease-in-out flex items-center justify-center
 						.img-wrapper
 							@apply  relative rounded-md overflow-hidden transition-all duration-500 ease-in-out
+							img
+								@apply img-ratio
 					.product-item-content
 						@apply flex flex-col gap-3
 						.product-item-name
-							@apply flex flex-col items-center gap-2
+							@apply flex flex-col items-center gap-0
 							span
 								@apply w-full text-center
-							.product-name
+							span.category-text
+								@apply text-[11px] text-neutral-500 uppercase leading-5
+							span.product-name
 								@apply text-neutral-900 text-lg font-bold transition-all duration-300
 								.product-item:hover &
 									@apply text-primary-1

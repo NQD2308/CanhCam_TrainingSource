@@ -1,95 +1,105 @@
-.section-5(class="w-full py-20") 
+.section-5.section-py 
 	.container(class="w-full grid grid-cols-1 gap-6 py-0")
 		.title-content
 			h2 Bí Quyết Giữ Trọn Vẹn Dinh Dưỡng
 			.categol-list
-				.categol-item
-					a(class="bg-primary-2 text-white border border-primary-2" href="#") Tất cả
-					a(class="border border-neutral-500 "  href="#") Trái cây sấy thăng hoa
-					a(class="border border-neutral-500 "  href="#") Rau củ quả sấy thăng hoa 
-					a(class="border border-neutral-500 "  href="#") Pet Food sấy thăng hoa
-					a(class="border border-neutral-500 "  href="#") Sữa chua sấy thăng hoa
-					a(class="border border-neutral-500 "  href="#") Bột sấy thăng hoa
+				.categol-item(data-toggle="tabslet")
+					ul 
+						li 
+							a(class="bg-primary-2 text-white border border-primary-2" href="#") Tất cả
+						li
+							a(class="border border-neutral-500 "  href="#") Trái cây sấy thăng hoa
+						li 
+							a(class="border border-neutral-500 "  href="#") Rau củ quả sấy thăng hoa 
+						li
+							a(class="border border-neutral-500 "  href="#") Pet Food sấy thăng hoa
+						li 
+							a(class="border border-neutral-500 "  href="#") Sữa chua sấy thăng hoa
+						li 
+							a(class="border border-neutral-500 "  href="#") Bột sấy thăng hoa
+					
+
 	
-		.product-list(class="grid grid-cols-2 md:grid-cols-4 gap-6")
+	
+		.product-list(class="grid grid-cols-2 md:grid-cols-4 gap-10")
 			//- banner
 			.banner(class="col-span-2 hidden md:block")
-				img(src="/img/banner_san_pham.png", alt="" class="w-full h-full object-cover aspect-[16/9] rounded-md")
+				img(src="/img/banner_san_pham.png", alt="" class="w-full object-cover rounded-md")
 			//- product cart
 			a.product(class="col-span-1" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
-						.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
-							img(src="/img/san_pham_1.png", alt="", class="w-full product-img object-cover aspect-[16/9]")
+						.img-ratio
+							img(src="/img/san_pham_1.png", alt="", class="product-img")
 						.product-item-img-overlay(class=" group-hover:translate-y-[-20px] bg-white")
 							i(class="fa-solid fa-eye text-neutral-900 text-xl icon-eye transition-all duration-500")
-					.product-item-content(class="p-4 flex justify-between items-center")
+					.product-item-content(class=" flex justify-between items-center")
 						.product-item-name
-							span(class="text-neutral-500 text-sm uppercase") Trái cây sấy thăng hoa	
+							span(class="category-text") Trái cây sấy thăng hoa	
 							span(class="product-name") Sấy thăng hoa trái cây
 							span(class="text-lg font-bold text-primary-1") 46.000đ
 			a.product(class="col-span-1" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
-						.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
-							img(src="/img/san_pham_2.png", alt="", class="w-full product-img object-cover")
+						//-.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
+						img(src="/img/san_pham_2.png", alt="", class="w-full product-img object-cover")
 						.product-item-img-overlay(class=" group-hover:translate-y-[-20px] bg-white")
 							i(class="fa-solid fa-eye text-neutral-900 text-xl icon-eye transition-all duration-500")
-					.product-item-content(class="p-4 flex justify-between items-center")
+					.product-item-content(class="flex justify-between items-center")
 						.product-item-name
-							span(class="text-neutral-500 text-sm uppercase") RAU CỦ QUẢ SẤY THĂNG HOA
+							span(class="category-text") RAU CỦ QUẢ SẤY THĂNG HOA
 							span(class="product-name") Thanh long sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ				
 			a.product(class="col-span-1" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
-						.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
+						.img-ratio
 							img(src="/img/san_pham_3.png", alt="", class="w-full product-img object-cover")
 						.product-item-img-overlay(class=" group-hover:translate-y-[-20px] bg-white")
 							i(class="fa-solid fa-eye text-neutral-900 text-xl icon-eye transition-all duration-500")
-					.product-item-content(class="p-4 flex justify-between items-center")
+					.product-item-content(class="flex justify-between items-center")
 						.product-item-name
-							span(class="text-neutral-500 text-sm uppercase")  SỮA CHUA SẤY THĂNG HOA
+							span(class="category-text")  SỮA CHUA SẤY THĂNG HOA
 							span(class="product-name") Sữa chua sấy vị chuối sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ
 			a.product(class="col-span-1" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
-						.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
+						.img-ratio
 							img(src="/img/san_pham_4.png", alt="", class="w-full product-img object-cover")
 						.product-item-img-overlay(class=" group-hover:translate-y-[-20px] bg-white")
 							i(class="fa-solid fa-eye text-neutral-900 text-xl icon-eye transition-all duration-500")
-					.product-item-content(class="p-4 flex justify-between items-center")
+					.product-item-content(class="flex justify-between items-center")
 						.product-item-name
-							span(class="text-neutral-500 text-sm uppercase") BỘT SẤY THĂNG HOA
+							span(class="category-text") BỘT SẤY THĂNG HOA
 							span(class="product-name") Bột rau củ quả sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ
 			a.product(class="col-span-1" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
-						.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
+						.img-ratio
 							img(src="/img/san_pham_5.png", alt="", class="w-full product-img object-cover")
 						.product-item-img-overlay(class=" group-hover:translate-y-[-20px] bg-white")
 							i(class="fa-solid fa-eye text-neutral-900 text-xl icon-eye transition-all duration-500")
-					.product-item-content(class="p-4 flex justify-between items-center")
+					.product-item-content(class="flex justify-between items-center")
 						.product-item-name
-							span(class="text-neutral-500 text-sm uppercase") TRÁI CÂY SẤY THĂNG HOA
+							span(class="category-text") TRÁI CÂY SẤY THĂNG HOA
 							span(class="product-name") Bí đỏ sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ
 			a.product(class="col-span-1" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
-						.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
+						.img-ratio
 							img(src="/img/san_pham_6.png", alt="", class="w-full product-img object-cover")
 						.product-item-img-overlay(class=" group-hover:translate-y-[-20px] bg-white")
 							i(class="fa-solid fa-eye text-neutral-900 text-xl icon-eye transition-all duration-500")
-					.product-item-content(class="p-4 flex justify-between items-center")
+					.product-item-content(class="flex justify-between items-center")
 						.product-item-name
-							span(class="text-neutral-500 text-sm uppercase")  PET FOOD SẤY THĂNG HOA
+							span(class="category-text")  PET FOOD SẤY THĂNG HOA
 							span(class="product-name") Xoài sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ
 
-		.btn-view-all(class="flex justify-center items-center")
+		.cta-area(class="flex justify-center items-center")
 			a.btn-view-more
 				span(href="#" class="btn btn-primary") Xem tất cả
 				i(class="fa-regular fa-arrow-up arrow-icon")
