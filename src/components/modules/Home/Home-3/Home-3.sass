@@ -33,6 +33,9 @@
 					@apply w-full flex items-center justify-center
 
 					.box
+						@media screen and (max-width: 768px) 
+							width: 100%
+						
 						width: rr(259px)
 						height: rr(259px)
 						@apply flex flex-col items-start p-6 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
@@ -55,9 +58,12 @@
 					@apply w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4
 
 					.box
+						@media screen and (max-width: 768px) 
+							width: 100%
+
 						width: rr(259px)
 						height: rr(259px)
-						@apply flex flex-col items-start px-6 md:p-8 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
+						@apply flex flex-col items-start p-6 md:p-8 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
 						
 						i
 							@apply text-3xl md:text-4xl lg:text-5xl text-white 

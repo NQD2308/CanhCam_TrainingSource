@@ -1,24 +1,13 @@
-// Button styles
-a.btn-view-all
-	@apply flex items-center py-3 px-6 w-fit gap-3 border border-white hover:border-primary-2 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 mt-10
-	span
-		@apply text-white
-	.arrow-icon
-		@apply text-white transform rotate-45 transition-transform duration-300
-	&:hover
-		span
-			@apply text-white
-		i
-			@apply text-white 
-		.arrow-icon
-			@apply rotate-90 
-	
+
 .section-6
-	.container
+	.my-container
 		.title-content
 			h2
 				@apply text-6xl font-medium space-x-14 text-center text-white
 		.product-carousel
+			padding: 0 rr(150px)
+			.wrapper
+				margin: 0 rr(90px)
 			a.cart
 				@apply flex flex-col gap-3
 				.cart-image
@@ -30,13 +19,16 @@ a.btn-view-all
 						.img-wrapper
 							@apply  relative rounded-md overflow-hidden transition-all duration-500 ease-in-out
 							img
-								@apply w-full h-full object-center
+								width: rr(320px)
+								@apply object-center
 				.cart-content
 					@apply flex flex-col gap-3
 					.product-item-name
-						@apply flex flex-col items-center gap-2
+						@apply flex flex-col items-center gap-1
 						span
 							@apply w-full text-center
+						.category-text
+							@apply text-neutral-White text-[11px] uppercase
 						.product-name
 							@apply text-lg text-white font-bold transition-all duration-300
 							.product-item:hover &
@@ -53,3 +45,20 @@ a.btn-view-all
 						.product-item-name
 							.product-name
 								@apply text-primary-2
+
+	// Button styles
+	a.btn-view-all
+		margin-top: rr(30px)
+		@apply flex items-center py-3 px-6 w-fit gap-3 border border-white hover:border-primary-2 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300
+		span
+			@apply text-white
+		.arrow-icon
+			@apply text-white transform rotate-45 transition-transform duration-300
+		&:hover
+			span
+				@apply text-white
+			i
+				@apply text-white 
+			.arrow-icon
+				@apply rotate-90 
+	

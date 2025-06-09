@@ -16,10 +16,13 @@
 				@apply rotate-90 
 
 	.content p
-			width: rr(640px)
+			// width: rr(640px)
 			@apply text-justify
 
 	.img-item
+		@media screen and ( max-width: 1024px)
+			width: rr(202px)
+			height: rr(186px)
 		width: rr(332px)
 		height: rr(316px)
 		@apply object-cover

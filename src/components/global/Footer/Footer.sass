@@ -2,8 +2,12 @@ footer
 	div
 		.container
 			div
+				.wrapper
+					width: rr(418px)
 				.section-row-space
 					.input-email
+						input
+							height: rr(48px)
 						button.btn-send
 							@apply flex items-center py-1 px-4 w-fit gap-3 bg-primary-1 rounded-3xl justify-center hover:bg-primary-2 transition-all duration-300 
 							span
@@ -22,6 +26,12 @@ footer
 						.logo-certification
 							img
 								@apply w-auto h-15
+				.menu
+						ul
+							li
+								a
+									@apply hover:text-primary-2
+			
 	.container-info
 		.section-row-space
 			a

@@ -1,9 +1,25 @@
-a.cart-news
-	&:hover
-		.img-content
-			img
-				@apply transition-all duration-500 ease-in-out
-				transform: scale(1.1) 
+.section-7
+	.news-category
+		@apply flex items-center justify-center 
+		ul
+			@apply flex items-center justify-center gap-3
+			li a
+				@apply text-neutral-500 px-4 py-3 rounded-full border border-neutral-500 hover:bg-primary-2 hover:border-primary-2 hover:text-white transition-all duration-300
+				
+			li:first-child a
+				@apply text-white bg-primary-2 border border-primary-2 rounded-full py-3 px-4
+	a.cart-news
 		.content-wrapper
-			.content-title
-				@apply text-primary-2 transition-all duration-500 ease-in-out
+			.content-badge
+						span.category-post
+							@apply border border-neutral-500 rounded-1 px-3 py-1 text-neutral-500 text-xs
+						span.date-post
+							@apply text-neutral-500 text-xs
+		&:hover
+			.img-content
+				img
+					@apply transition-all duration-500 ease-in-out
+					transform: scale(1.1) 
+			.content-wrapper
+				.content-title
+					@apply text-primary-2 transition-all duration-500 ease-in-out

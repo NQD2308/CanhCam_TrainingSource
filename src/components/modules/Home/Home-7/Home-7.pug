@@ -1,38 +1,74 @@
-.section-7(class="w-full py-20")
-	.container(class="w-full grid grid-cols-1 gap-6")
+.section-7.section-py
+	.container(class="w-full grid grid-cols-1 gap-10 ")
 		.title-content(class="w-full flex flex-col items-center justify-center")
 			h2(class="text-6xl font-medium text-center text-neutral-900") Tin tức
-		.news-category(class="w-full flex items-center justify-center gap-3")
-			a.news-category-item(class="text-white bg-primary-2 rounded-full py-3 px-4" href="#") Tất cả
-			a.news-category-item(class="text-neutral-500 px-4 py-3 rounded-full border border-neutral-500 hover:bg-primary-2 hover:border-primary-2 hover:text-white transition-all duration-300" href="#") Tin hoạt động
-			a.news-category-item(class="text-neutral-500 px-4 py-3 rounded-full border border-neutral-500 hover:bg-primary-2 hover:border-primary-2 hover:text-white transition-all duration-300" href="#") Sự kiện
+		
+		.news-category
+			ul 
+				li 	
+					a.news-category-item(data-type="all" class="active" href="#") Tất cả
+				li 
+					a.news-category-item(data-type="activity" href="#") Tin hoạt động
+				li 
+					a.news-category-item(data-type="event" href="#") Sự kiện
+			
 		.news-wrapper 
-			.news-list(class="w-full grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-3")
-				a.cart-news(class="w-full grid grid-cols-1 md:col-span-3 lg:col-span-4 px-3 pt-3 rounded-xl bg-neutral-50")
+			.news-list(class="w-full grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-10")
+				a.cart-news(data-category="activity" class="w-full grid grid-cols-1 md:col-span-3 lg:col-span-4 px-3 pt-3 rounded-xl bg-neutral-50" href="#")
 					.img-content(class="rounded-xl overflow-hidden group")
 						img(src="/img/news_1.png", alt="", class="w-full h-full object-cover aspect-[16/9] transition-all duration-500 ease-in-out")
-					.content-wrapper(class="mx-3 my-6")
+					.content-wrapper(class="py-6 px-5")
 						.content-badge(class="flex items-center gap-3")
-							span.tags(class="border border-neutral-500 rounded-1 px-3 py-1 text-neutral-500 text-sm") Tin hoạt động
-							span.date(class="text-neutral-500 text-sm") 04.03.2025
-						.content-title(class="text-neutral-900 text-[20px] font-bold mt-2 overflow-hidden truncate whitespace-nowrap transition-all duration-500 ease-in-out") Bí quyết chọn thực phẩm chất lượng cao cho gia đình
-						.content-description(class="text-neutral-800 text-base font-medium mt-2 line-clamp-2 overflow-hidden text-ellipsis") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-				a.cart-news(class="w-full grid grid-cols-1 md:col-span-3 lg:col-span-4 px-3 pt-3 rounded-xl bg-neutral-50")
+							span.tags(class="category-post") Tin hoạt động
+							span.date(class="date-post") 04.03.2025
+						.content-title(class="text-neutral-900 text-xl font-bold overflow-hidden truncate whitespace-nowrap transition-all duration-500 ease-in-out") Bí quyết chọn thực phẩm chất lượng cao cho gia đình
+						.content-description(class="text-neutral-800 font-medium line-clamp-2 overflow-hidden text-ellipsis") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+				a.cart-news(data-category="event" class="w-full grid grid-cols-1 md:col-span-3 lg:col-span-4 px-3 pt-3 rounded-xl bg-neutral-50" href="#")
 					.img-content(class="rounded-xl overflow-hidden group")
 						img(src="/img/news_2.png", alt="", class="w-full h-full object-cover aspect-[16/9] transition-all duration-500 ease-in-out")
-					.content-wrapper(class="mx-3 my-6")
+					.content-wrapper(class="px-3 py-6")
 						.content-badge(class="flex items-center gap-3")
-							span.tags(class="border border-neutral-500 rounded-1 px-3 py-1 text-neutral-500 text-sm") Sự kiện 
-							span.date(class="text-neutral-500 text-sm") 04.03.2025
-						.content-title(class="text-neutral-900 text-[20px] font-bold mt-2 overflow-hidden truncate whitespace-nowrap transition-all duration-500 ease-in-out") Ứng dụng công nghệ sấy thực phẩm thăng hoa trong ẩm thực và dinh dưỡng
-						.content-description(class="text-neutral-800 text-base font-medium mt-2 line-clamp-2 overflow-hidden text-ellipsis") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-				a.cart-news(class="w-full grid grid-cols-1 md:col-span-3 lg:col-span-4 px-3 pt-3 rounded-xl bg-neutral-50")
+							span.tags(class="category-post") Sự kiện 
+							span.date(class="date-post") 04.03.2025
+						.content-title(class="text-neutral-900 text-xl font-bold mt-2 overflow-hidden truncate whitespace-nowrap transition-all duration-500 ease-in-out") Ứng dụng công nghệ sấy thực phẩm thăng hoa trong ẩm thực và dinh dưỡng
+						.content-description(class="text-neutral-800 font-medium mt-2 line-clamp-2 overflow-hidden text-ellipsis") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+				a.cart-news(data-category="activity" class="w-full grid grid-cols-1 md:col-span-3 lg:col-span-4 px-3 pt-3 rounded-xl bg-neutral-50" href="#")
 					.img-content(class="rounded-xl overflow-hidden group")
 						img(src="/img/news_3.png", alt="", class="w-full h-full object-cover aspect-[16/9] transition-all duration-500 ease-in-out")
-					.content-wrapper(class="mx-3 my-6")
+					.content-wrapper(class="px-3 py-6")
 						.content-badge(class="flex items-center gap-3")
-							span.tags(class="border border-neutral-500 rounded-1 px-3 py-1 text-neutral-500 text-sm") Tin hoạt động
-							span.date(class="text-neutral-500 text-sm") 04.03.2025
-						.content-title(class="text-neutral-900 text-[20px] font-bold mt-2 overflow-hidden truncate whitespace-nowrap transition-all duration-500 ease-in-out") Làm thế nào để chọn thực phẩm chất lượng cho bữa ăn hàng ngày?
-						.content-description(class="text-neutral-800 text-base font-medium mt-2 line-clamp-2 overflow-hidden text-ellipsis") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+							span.tags(class="category-post") Tin hoạt động
+							span.date(class="date-post") 04.03.2025
+						.content-title(class="text-neutral-900 text-xl font-bold mt-2 overflow-hidden truncate whitespace-nowrap transition-all duration-500 ease-in-out") Làm thế nào để chọn thực phẩm chất lượng cho bữa ăn hàng ngày?
+						.content-description(class="text-neutral-800 font-medium mt-2 line-clamp-2 overflow-hidden text-ellipsis") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
+
+script. 
+	document.addEventListener("DOMContentLoaded", () => {
+		const buttons = document.querySelectorAll(".news-category-item");
+		const posts = document.querySelectorAll(".cart-news");
+
+		buttons.forEach(btn => {
+			btn.addEventListener("click", (e) => {
+				e.preventDefault();
+
+				// Xóa class active cũ
+				buttons.forEach(b => b.classList.remove("active"));
+				btn.classList.add("active");
+
+				const type = btn.dataset.type;
+
+				posts.forEach(post => {
+					const category = post.dataset.category;
+
+					if (type === "all" || category === type) {
+						post.style.display = "block";
+					} else {
+						post.style.display = "none";
+					}
+				});
+			});
+		});
+	});
+
+
 			
