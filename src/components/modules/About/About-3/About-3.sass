@@ -1,30 +1,19 @@
 .about-section-3
 	.product-carousel
-			a.cart
-				@apply flex flex-col gap-3
+			.cart
+				@apply flex flex-col 
 				.cart-image
 					@apply flex flex-col gap-3
-					.product-item-img
-						@apply w-full h-full relative overflow-hidden rounded-md				
+					.product-img
+						height: rr(160px)
+
 				.cart-content
 					@apply flex flex-col gap-3
 					.product-item-name
-						@apply flex flex-col items-center gap-2
+						@apply flex flex-col items-center
 						span
 							@apply w-full text-center
 						.product-name
-							@apply text-lg text-white font-bold transition-all duration-300
+							@apply text-lg text-neutral-700 font-bold transition-all duration-300
 							.product-item:hover &
 								@apply text-primary-1
-
-				&:hover
-					.product-item-img 
-						.img-wrapper
-							transform: scale(1.1)
-						.product-item-img-overlay
-							transform: translateX(-50%) translateY(-20px)
-							@apply opacity-100
-					.cart-content
-						.product-item-name
-							.product-name
-								@apply text-primary-2
