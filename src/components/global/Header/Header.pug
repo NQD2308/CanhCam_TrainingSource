@@ -9,12 +9,12 @@ header(class="w-full sticky top-0 z-20")
 
 				//- Berger menu
 				.berger-menu(class="flex xl:hidden items-center lg:order-2 gap-3" aria-controls="mobile-menu-2" data-collapse-toggle="mobile-menu-2" aria-expanded="false") 
-					
 					a.berger-menu-icon(class="w-fit h-fit  items-center p-2 text-3xl text-neutral-900 rounded-lg md:hidden focus:outline-none")
-						<i class="fa-light fa-bars"></i>
+						i(class="fa-light fa-bars icon-bars")
+						i(class="fa-light fa-xmark icon-close hidden")
 				
 				//- Menu
-				.menu-2(class="hidden justify-between items-center w-full gap-4 lg:gap-8 xl:gap-16 lg:flex lg:w-auto" id="mobile-menu-2")
+				.menu-2(class="hidden justify-between items-center w-full gap-4 lg:gap-8 xl:gap-16 lg:flex lg:w-auto")
 					.wrapper-search-mobile(class="w-screen relative block md:hidden px-3 py-2")
 						input(type="text" class="w-full p-2 rounded-full border border-gray-300 px-3 " placeholder="Tìm kiếm...")
 						button(class="cursor-pointer text-primary-2 transition-all duration-300 absolute right-8 top-1/2 -translate-y-1/2")
@@ -55,6 +55,46 @@ header(class="w-full sticky top-0 z-20")
 					.menu-item(class="menu-item px-3 md:px-0 block md:hidden")
 						a(href="#") Liên hệ
 				
+				.mobile-menu(class="transition-transform duration-300 ease-in-out translate-x-full")
+					.wrapper-search-mobile(class="relative px-3 py-2")
+						input(type="text" class="w-full p-2 border-b border-gray-300 px-3 " placeholder="Tìm kiếm...")
+						button(class="cursor-pointer text-primary-2 transition-all duration-300 absolute right-8 top-1/2 -translate-y-1/2")
+							<i class="fa-regular fa-magnifying-glass text-2xl "></i>
+					
+					.menu-item(class="menu-item px-3")
+						a(href="/" class="block text-primary-2 border-b-2 w-fit border-primary-2 md:text-sm lg:text-base py-") 
+							<i class="fa-solid fa-house text-primary-2"></i>
+					
+					.menu-item(class="menu-item px-3")
+						a(href="/about.html") Giới thiệu
+					
+					.menu-item(class="group inline-block p-3 w-full group transition-all duration-300")
+						cta-product(class="cta-product flex items-center justify-between text-left cursor-pointer py-2 md:px-0 group rounded-sm")
+							span(class="pr-1 font-medium text-neutral-900 text-lg group-hover:text-primary-2 transition-all duration-300 ease-in-out") Sản phẩm
+							i(class="fa-solid fa-caret-down text-neutral-900 text-lg ml-2 transition-transform duration-300")
+						ul.submenu.hidden(class="flex flex-col gap-1 px-4 py-2 transition-all duration-300 ease-in-out")
+							li(class="block w-full")
+								a(href="#" class="block w-full py-2 md:text-sm lg:text-base") Sản phẩm 1
+							li(class="block w-full")
+								a(href="#" class="block w-full py-2 md:text-sm lg:text-base") Sản phẩm 2
+							li(class="block w-full")
+								a(href="#" class="block w-full py-2 md:text-sm lg:text-base") Sản phẩm 3
+					
+					.menu-item(class="menu-item px-3 ")
+						a(href="#") Công bố sản phẩm
+
+					.menu-item(class="menu-item px-3 ")
+						a(href="#") Quy trình công nghệ
+					
+					.menu-item(class="menu-item px-3")
+						a(href="#") Chứng nhận	
+					
+					.menu-item(class="menu-item px-3")
+						a(href="#") Tin tức
+
+					.menu-item(class="menu-item px-3 block md:hidden")
+						a(href="#") Liên hệ
+									
 				//- Other function
 				.right-side(class="flex items-center")
 					button.search-box(type="button" class="relative block" id="openModalBtn")
@@ -78,7 +118,26 @@ header(class="w-full sticky top-0 z-20")
 						span(class="text-white font-medium") Liên hệ
 						<i class="fa-light fa-arrow-up text-white text-2xl arrow-icon"></i>
 
+script. 
+	//- xoay icon xổ xuống cho mobile menu
+	document.addEventListener("DOMContentLoaded", function () {
+		const cta = document.querySelector('.cta-product')
+		const submenu = document.querySelector('.submenu')
+		const icon = cta.querySelector('i')
 
+		cta.addEventListener('click', function () {
+			submenu.classList.toggle('hidden')
+			icon.classList.toggle('rotate-180') // Xoay icon xuống
+		})
+	})
+	
+	const menuToggleBtn = document.querySelector('.berger-menu-icon')
+	const mobileMenu = document.querySelector('.mobile-menu')
+
+	menuToggleBtn.addEventListener('click', () => {
+	mobileMenu.classList.toggle('open') // toggle menu
+	menuToggleBtn.classList.toggle('open') // toggle icon
+	})
 
 
 						
