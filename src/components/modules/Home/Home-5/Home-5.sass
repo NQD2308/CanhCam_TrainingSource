@@ -7,70 +7,71 @@
 			@apply text-primary-1 transform rotate-45 transition-transform duration-300
 		&:hover
 			span
-				@apply text-white
+				@apply text-neutral-White
 			i
-				@apply text-white 
+				@apply text-neutral-White 
 			.arrow-icon
 				@apply rotate-90 
 
-	.container
-		.title-content
-			h2
-				@apply text-6xl font-medium text-center mb-10
-			.categol-list
-				@apply w-full
-				.categol-item
-					ul
-						@apply flex items-center justify-center gap-3 
-						//flex-nowrap overflow-x-auto w-full min-w-0 scrollbar-hide
-						li
-							height: rr(25px)
-							a
-								@apply text-lg px-4 py-3 rounded-full hover:bg-primary-2 hover:text-white hover:border-primary-2 transition-all duration-300 shrink-0
-				// Responsive: mobile chuyển sang ngang, scroll được
-				@media (max-width: 768px)
-					.categol-item
-						@apply flex-nowrap overflow-x-auto w-full		
+	.title-content
+		h2
+			@apply text-6xl font-medium text-center mb-10
+		.categol-list
+			.categol-item
+				ul
+					@apply flex lg:justify-center overflow-x-auto gap-3 scrollbar-hide
+					//flex-nowrap overflow-x-auto w-full min-w-0 scrollbar-hide
+					li
+						@apply  shrink-0 h-full rounded-full border px-0 py-3 border-neutral-500 hover:border-primary-2 hover:bg-primary-2 hover:text-neutral-White
+						// height: rr(25px)
+						a
+							@apply h-full text-lg px-4 py-3 group-hover:bg-primary-2 group-hover:text-neutral-White  transition-all duration-300 shrink-0
 
-		.product-list
-			@apply mt-7
-			.banner img
-				height: rr(400px)
-			a.product
+						&.active
+							@apply bg-primary-2 text-white border border-primary-2
+
+							a 
+								@apply text-white
+							
+
+	.product-list
+		@apply mt-7
+		.banner img
+			height: rr(400px)
+		a.product
+			@apply flex flex-col gap-3
+			.product-item
 				@apply flex flex-col gap-3
-				.product-item
+				.product-item-img
+					@apply w-full h-full relative overflow-hidden rounded-md
+					.product-item-img-overlay
+						@apply absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-full bg-white p-[10px] rounded-md transition-all duration-500 ease-in-out flex items-center justify-center
+					.img-wrapper
+						@apply  relative rounded-md overflow-hidden transition-all duration-500 ease-in-out
+						img
+							@apply img-ratio
+				.product-item-content
 					@apply flex flex-col gap-3
-					.product-item-img
-						@apply w-full h-full relative overflow-hidden rounded-md
-						.product-item-img-overlay
-							@apply absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-full bg-white p-[10px] rounded-md transition-all duration-500 ease-in-out flex items-center justify-center
+					.product-item-name
+						@apply flex flex-col items-center gap-0
+						span
+							@apply w-full text-center
+						span.category-text
+							@apply text-[11px] text-neutral-500 uppercase leading-5
+						span.product-name
+							@apply text-neutral-900 text-lg font-bold transition-all duration-300
+							.product-item:hover &
+								@apply text-primary-1
+
+				&:hover
+					.product-item-img 
 						.img-wrapper
-							@apply  relative rounded-md overflow-hidden transition-all duration-500 ease-in-out
-							img
-								@apply img-ratio
+							transform: scale(1.1)
+						.product-item-img-overlay
+							transform: translateX(-50%) translateY(-20px)
+							@apply opacity-100
 					.product-item-content
-						@apply flex flex-col gap-3
 						.product-item-name
-							@apply flex flex-col items-center gap-0
-							span
-								@apply w-full text-center
-							span.category-text
-								@apply text-[11px] text-neutral-500 uppercase leading-5
-							span.product-name
-								@apply text-neutral-900 text-lg font-bold transition-all duration-300
-								.product-item:hover &
-									@apply text-primary-1
+							.product-name
+								@apply text-primary-2
 
-					&:hover
-						.product-item-img 
-							.img-wrapper
-								transform: scale(1.1)
-							.product-item-img-overlay
-								transform: translateX(-50%) translateY(-20px)
-								@apply opacity-100
-						.product-item-content
-							.product-item-name
-								.product-name
-									@apply text-primary-2
-
-	

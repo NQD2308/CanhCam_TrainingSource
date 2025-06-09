@@ -13,15 +13,16 @@
 			@apply w-full md:col-span-5
 
 			.quote-content
-				margin-top: rr(265px)
-				margin-left: rr(-20px)
+				@media screen and (min-width: 768px)
+					margin-top: rr(265px)
+					margin-left: rr(-20px)
 				@apply w-full relative
 
 				.quote-icon
 					@apply w-full absolute top-0 left-0 z-0
 
 				.quote-title
-					@apply w-full text-3xl md:text-4xl lg:text-6xl font-medium text-white text-[roboto] relative z-10 pt-9 pl-6
+					@apply w-full text-3xl md:text-4xl lg:text-6xl font-medium text-neutral-White relative z-10 pt-9 pl-6
 
 		.col-right-home-3
 			@apply w-full md:col-span-7
@@ -38,21 +39,21 @@
 						
 						width: rr(259px)
 						height: rr(259px)
-						@apply flex flex-col items-start p-6 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
+						@apply flex flex-col items-center md:items-start p-6 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
 						
 						i
-							@apply my-auto text-3xl md:text-4xl lg:text-5xl text-white
+							@apply my-auto text-5xl text-neutral-White
 						
 						p
-							@apply text-base md:text-lg lg:text-xl my-auto font-bold text-white
+							@apply text-xl my-auto font-bold text-neutral-White
 
 						.count
 							@apply my-auto
 							h4
-								@apply text-4xl md:text-5xl lg:text-[52px] font-bold text-white 
+								@apply text-[52px] font-bold text-neutral-White
 
 							span 
-								@apply text-neutral-White text-6xl mt-2
+								@apply text-neutral-White text-4xl md:mt-1 lg:mt-2
 
 				.bottom-content
 					@apply w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4
@@ -63,19 +64,19 @@
 
 						width: rr(259px)
 						height: rr(259px)
-						@apply flex flex-col items-start p-6 md:p-8 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
+						@apply flex flex-col items-center md:items-start p-6 md:p-8 bg-[#ED9A22]/40 backdrop-blur-sm rounded-xl border-2 border-transparent border-x-[#ED9A22] border-y-[#FEC163]
 						
 						i
-							@apply text-3xl md:text-4xl lg:text-5xl text-white 
+							@apply text-5xl text-neutral-White
 						
 						p
 							
-							@apply text-base md:text-lg inline-block font-bold text-white
+							@apply text-lg inline-block font-bold text-neutral-White
 
 						.count
 							@apply my-auto
 							h4
-								@apply text-4xl md:text-5xl lg:text-[52px] font-bold text-white 
+								@apply text-[52px] font-bold text-neutral-White
 
 							span 
-								@apply text-neutral-White text-6xl mt-2
+								@apply text-neutral-White text-4xl md:mt-1 lg:mt-2

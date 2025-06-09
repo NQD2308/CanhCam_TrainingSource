@@ -6,8 +6,9 @@
 			li a
 				@apply text-neutral-500 px-4 py-3 rounded-full border border-neutral-500 hover:bg-primary-2 hover:border-primary-2 hover:text-white transition-all duration-300
 				
-			li:first-child a
-				@apply text-white bg-primary-2 border border-primary-2 rounded-full py-3 px-4
+				&.active
+					@apply text-white bg-primary-2 border border-primary-2
+
 	a.cart-news
 		.content-wrapper
 			.content-badge

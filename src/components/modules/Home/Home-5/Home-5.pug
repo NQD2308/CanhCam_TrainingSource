@@ -3,30 +3,28 @@
 		.title-content
 			h2 Bí Quyết Giữ Trọn Vẹn Dinh Dưỡng
 			.categol-list
-				.categol-item(data-toggle="tabslet")
+				.categol-item
 					ul 
-						li 
-							a(class="bg-primary-2 text-white border border-primary-2" href="#") Tất cả
+						li.active
+							a.category-product(href="#" data-type="all") Tất cả
 						li
-							a(class="border border-neutral-500 "  href="#") Trái cây sấy thăng hoa
+							a.category-product(href="#" data-type="trai-cay-say-thang-hoa") Trái cây sấy thăng hoa
 						li 
-							a(class="border border-neutral-500 "  href="#") Rau củ quả sấy thăng hoa 
+							a.category-product( href="#" data-type="rau-cu-qua-say-thang-hoa") Rau củ quả sấy thăng hoa 
 						li
-							a(class="border border-neutral-500 "  href="#") Pet Food sấy thăng hoa
+							a.category-product(href="#" data-type="pet-food-say-thang-hoa") Pet Food sấy thăng hoa
 						li 
-							a(class="border border-neutral-500 "  href="#") Sữa chua sấy thăng hoa
+							a.category-product(href="#" data-type="sua-chua-say-thang-hoa") Sữa chua sấy thăng hoa
 						li 
-							a(class="border border-neutral-500 "  href="#") Bột sấy thăng hoa
+							a.category-product(href="#" data-type="bot-say-thang-hoa") Bột sấy thăng hoa
 					
 
-	
-	
 		.product-list(class="grid grid-cols-2 md:grid-cols-4 gap-10")
 			//- banner
-			.banner(class="col-span-2 hidden md:block")
+			.banner(class="col-span-2 hidden md:block" data-category="all")
 				img(src="/img/banner_san_pham.png", alt="" class="w-full object-cover rounded-md")
 			//- product cart
-			a.product(class="col-span-1" href="#")
+			a.product.cart-product(class="col-span-1" data-category="rau-cu-qua-say-thang-hoa" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
 						.img-ratio
@@ -38,7 +36,7 @@
 							span(class="category-text") Trái cây sấy thăng hoa	
 							span(class="product-name") Sấy thăng hoa trái cây
 							span(class="text-lg font-bold text-primary-1") 46.000đ
-			a.product(class="col-span-1" href="#")
+			a.product.cart-product(class="col-span-1" data-category="trai-cay-say-thang-hoa" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
 						//-.img-wrapper(class="w-full h-full relative rounded-md overflow-hidden group")
@@ -50,7 +48,7 @@
 							span(class="category-text") RAU CỦ QUẢ SẤY THĂNG HOA
 							span(class="product-name") Thanh long sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ				
-			a.product(class="col-span-1" href="#")
+			a.product.cart-product(class="col-span-1" data-category="rau-cu-qua-say-thang-hoa" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
 						.img-ratio
@@ -62,7 +60,7 @@
 							span(class="category-text")  SỮA CHUA SẤY THĂNG HOA
 							span(class="product-name") Sữa chua sấy vị chuối sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ
-			a.product(class="col-span-1" href="#")
+			a.product.cart-product(class="col-span-1" data-category="trai-cay-say-thang-hoa" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
 						.img-ratio
@@ -74,7 +72,7 @@
 							span(class="category-text") BỘT SẤY THĂNG HOA
 							span(class="product-name") Bột rau củ quả sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ
-			a.product(class="col-span-1" href="#")
+			a.product.cart-product(class="col-span-1" data-category="trai-cay-say-thang-hoa" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
 						.img-ratio
@@ -86,7 +84,7 @@
 							span(class="category-text") TRÁI CÂY SẤY THĂNG HOA
 							span(class="product-name") Bí đỏ sấy thăng hoa
 							span(class="text-lg font-bold text-primary-1") 46.000đ
-			a.product(class="col-span-1" href="#")
+			a.product.cart-product(class="col-span-1" data-category="trai-cay-say-thang-hoa" href="#")
 				.product-item(class="rounded-md")
 					.product-item-img(class="w-full h-full relative group overflow-hidden")
 						.img-ratio
@@ -103,3 +101,32 @@
 			a.btn-view-more
 				span(href="#" class="btn btn-primary") Xem tất cả
 				i(class="fa-regular fa-arrow-up arrow-icon")
+
+
+script. 
+	document.addEventListener("DOMContentLoaded", () => {
+		const buttons = document.querySelectorAll(".category-product");
+
+		buttons.forEach(btn => {
+			btn.addEventListener("click", (e) => {
+				e.preventDefault();
+
+				// Bỏ active khỏi tất cả li
+				document.querySelectorAll(".categol-item ul li").forEach(li => li.classList.remove("active"));
+
+				// Gán active vào li chứa nút vừa bấm
+				btn.closest("li").classList.add("active");
+
+				const type = btn.dataset.type;
+				const posts = document.querySelectorAll(".cart-product");
+
+				posts.forEach(post => {
+					const category = post.dataset.category;
+					post.style.display = (type === "all" || category === type) ? "block" : "none";
+				});
+			});
+		});
+	});
+
+
+
