@@ -11,6 +11,8 @@
 	animation: 1.5s ring-chili infinite ease-in-out alternate
 .ring-food-footer
 	animation: 1.5s ring-food-footer infinite ease-in-out alternate
+.ring-phone 
+	animation: ringing 5s ease-in-out infinite
 @keyframes ring-chili
 	0%
 		transform: rotate(8deg)
@@ -33,3 +35,35 @@
 	100%
 		opacity: 1
 		transform: none
+
+
+///import css-variables from 
+@keyframes ringing 
+	20%  
+		transform: rotate(0deg) 
+	21%  
+		transform: rotate(10deg) 
+	22%  
+		transform: rotate(-10deg) 
+	23%  
+		transform: rotate(12deg) 
+	24%  
+		transform: rotate(-12deg) 
+	25% 
+		transform: rotate(12deg) 
+	26%  
+		transform: rotate(-12deg) 
+	28%  
+		transform: rotate(10deg) 
+	30%  
+		transform: rotate(-10deg) 
+	32%  
+		transform: rotate(5deg) 
+	34%  
+		transform: rotate(-5deg) 
+	36%  
+		transform: rotate(2deg) 
+	38%  
+		transform: rotate(0deg) 
+
+

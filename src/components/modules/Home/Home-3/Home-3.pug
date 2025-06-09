@@ -12,32 +12,36 @@
 					.box
 						<i class="fa-light fa-globe"></i>
 						.count(class="flex justify-center")
-							h4#count-partners(class="text-4xl md:text-5xl text-white") 100 
+							h4#count-partners(class="num text-4xl md:text-5xl text-white" data-val="100") 00
 							span +
 						p(class="text-base md:text-lg lg:text-xl font-bold text-white") Đối Tác Toàn Cầu
 				.bottom-content(class="w-full flex flex-col md:flex-row items-center justify-between gap-12 md:gap-4") 
 					.box
 						<i class="fa-light fa-business-time"></i>
 						.count(class="flex justify-center")
-							h4#count-experience(class="text-4xl md:text-5xl text-white") 10
+							h4#count-experience(class="num text-4xl md:text-5xl text-white" data-val="10") 0
 							span +
 						p(class="text-base md:text-lg lg:text-xl font-bold text-white") Năm Kinh Nghiệm
 					.box
 						<i class="fa-light fa-users"></i>
 						.count(class="flex justify-center")
-							h4#count-satisfaction(class="text-4xl md:text-5xl text-white") 99
+							h4#count-satisfaction(class="num text-4xl md:text-5xl text-white" data-val="99") 0
 							span %
 						p(class="text-base md:text-lg lg:text-xl font-bold text-white") Khách Hàng Hài Lòng
 
 
-script(src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.min.js")
-script. 
-	document.addEventListener('DOMContentLoaded', function () {
-		const count1 = new CountUp('count-partners', 100);
-		const count2 = new CountUp('count-experience', 10);
-		const count3 = new CountUp('count-satisfaction', 99);
+script.
+	let valueDisplays = document.querySelectorAll(".num")
+	let interval = 2000
 
-		if (!count1.error) count1.start();
-		if (!count2.error) count2.start();
-		if (!count3.error) count3.start();
-	});
+	valueDisplays.forEach((valueDisplay) => {
+		let startValue = 0
+		let endValue = parseInt(valueDisplay.getAttribute("data-val"))
+		let duration = Math.floor(interval/endValue)
+		let counter = setInterval(function () {
+			startValue += 1
+			valueDisplay.textContent = startValue
+			if(startValue == endValue)
+				clearInterval(counter)
+		}, duration)
+	})
