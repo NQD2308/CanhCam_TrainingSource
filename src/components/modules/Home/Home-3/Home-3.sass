@@ -34,7 +34,7 @@
 					@apply w-full flex items-center justify-center
 
 					.box
-						@media screen and (max-width: 768px) 
+						@media screen and (max-width: 600px) 
 							width: 100%
 						
 						width: rr(259px)
@@ -56,10 +56,13 @@
 								@apply text-neutral-White text-4xl md:mt-1 lg:mt-2
 
 				.bottom-content
-					@apply w-full flex flex-col md:flex-row items-center justify-between gap-8 md:gap-4
+					@media screen and (min-width: 480px) 
+						@apply flex-row
+					
+					@apply w-full flex flex-col items-center justify-between gap-8 md:gap-4
 
 					.box
-						@media screen and (max-width: 768px) 
+						@media screen and (max-width: 480px) 
 							width: 100%
 
 						width: rr(259px)

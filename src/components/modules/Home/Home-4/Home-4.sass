@@ -8,7 +8,6 @@
 				width: rr(660px)
 			
 			
-
 	.img-wrap
 		a
 			@screen xl
@@ -20,6 +19,8 @@
 					height: 100%
 					object-fit: cover
 					object-position: center
+	
+	
 	.item
 		@apply relative bg-neutral-50 rounded-xl
 		display: flex
@@ -34,8 +35,8 @@
 		user-select: none
 		>.headline 
 			display: inline-block  // Để nội dung vừa đủ
-			// transform: rotate(-90deg) // Nếu vẫn muốn xoay chữ như hiện tại
 			white-space: nowrap
+
 
 	.txt
 		@apply w-full h-full rounded-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-30
@@ -52,6 +53,8 @@
 
 		h3
 			@apply text-neutral-White font-bold text-3xl
+	
+	
 	.text
 		@apply w-full transition rounded-xl
 		justify-content: flex-end
@@ -70,6 +73,7 @@
 				margin-left: rr(166px) 
 				@apply mt-3
 	
+
 	.flex-options
 		display: flex
 		flex-direction: row
@@ -79,6 +83,8 @@
 		@apply w-full
 		@media screen and ( max-width: 1024px)
 			@apply hidden
+
+
 	.card-option
 		transform: scale(1)
 		background-size: cover
@@ -150,3 +156,16 @@
 		.card-label
 			@apply w-full h-full
 			transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95)
+
+	
+	.single-swiper
+		.text
+			@apply px-3 py-2
+
+			h3
+				@apply text-xl text-neutral-White
+
+			p
+				@apply text-lg
+
+

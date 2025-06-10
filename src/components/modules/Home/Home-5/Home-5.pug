@@ -21,7 +21,7 @@
 
 		.product-list(class="grid grid-cols-2 md:grid-cols-4 gap-10")
 			//- banner
-			.banner(class="col-span-2 hidden md:block" data-category="all")
+			a.banner(class="col-span-2 hidden md:block" data-category="all" href="#")
 				img(src="/img/banner_san_pham.png", alt="" class="w-full object-cover rounded-md")
 			//- product cart
 			a.product.cart-product(class="col-span-1" data-category="rau-cu-qua-say-thang-hoa" href="#")
@@ -118,7 +118,7 @@ script.
 				btn.closest("li").classList.add("active");
 
 				const type = btn.dataset.type;
-				const posts = document.querySelectorAll(".cart-product");
+				const posts = document.querySelectorAll([".cart-product", ".banner"]);
 
 				posts.forEach(post => {
 					const category = post.dataset.category;
